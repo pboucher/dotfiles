@@ -1,0 +1,6 @@
+{{ $computerName := output "scutil" "--get" "ComputerName" | trim -}}
+{{ if eq $computerName "kusanagi" -}}
+{{ template "brewfile_personal.tmpl" . -}}
+{{ else -}}
+{{ template "brewfile_work.tmpl" . -}}
+{{ end -}}

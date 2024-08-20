@@ -1,0 +1,25 @@
+{{ if hasKey .darwin "taps" -}}
+{{ range .darwin.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ if hasKey .darwin "brews" -}}
+{{ range .darwin.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ if hasKey .darwin "casks" -}}
+{{ range .darwin.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ if hasKey .darwin "vscode_extensions" -}}
+{{ range .darwin.vscode_extensions -}}
+vscode {{ . | quote }}
+{{ end -}}
+{{ end -}}
+{{ if hasKey .darwin "mas" -}}
+{{ range .darwin.mas -}}
+mas {{ .name | quote }}, id: {{ .id }}
+{{ end -}}
+{{ end -}}

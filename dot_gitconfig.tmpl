@@ -1,0 +1,84 @@
+{{- $computerName := output "scutil" "--get" "ComputerName" | trim -}}
+[core]
+    excludesfile = /Users/pboucher/.gitignore_global
+    autocrlf = input
+    editor = vim
+    pager = less -RX
+
+[user]
+    name = Patrick Boucher
+{{- if eq $computerName "kusanagi" }}
+    email = pboucher@patrickboucher.com
+{{- else }}
+    email = pboucher@laika.com
+{{- end }}
+
+[alias]
+    aa = add --all
+    ap = add --patch
+    br = branch
+    ca = commit --amend
+    ci = commit -v
+    co = checkout
+    count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
+    create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+    credit = blame
+    delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+    df = diff
+    hi = !git hist
+    hist = log --pretty=format:\"%C(bold blue)%h%C(reset) %C(bold yellow)%ad%C(reset) | %s%C(bold green)%d%C(reset) %C(bold white)[%an]%C(reset)\" --graph --date=short
+    gr = !git graph
+    graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset)\t%C(bold green)%d%C(reset) %C(white)%s%C(reset) - %C(bold white)%an%C(reset) %C(bold yellow)(%ar)%C(reset)' --all
+    info = !git config --local -l
+    last = log -1 HEAD
+    lb = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 10 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[37m %s\\033[0m\\n\", substr($2, 1, length($2)-1), $1)}'
+    lg = log --color --graph --pretty=format:'%Cred[%h]%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    merge-branch = !git checkout master && git merge @{-1}
+    overview = log --all --since='2 weeks' --oneline --no-merges --date=short --pretty='format:%C(auto,yellow)%h%C(auto,magenta)% %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN %C(auto,reset)%s%C(auto,red)% gD% D'
+    rah = !git add --all && git reset --hard
+    rebase-origin = !git fetch origin && git rebase origin/master
+    st = status
+    stashgrep = "!f() { for i in `git stash list --format=\"%gd\"` ; \
+              do git stash show -p $i | grep -H --label=\"$i\" \"$@\" ; done ; }; f"
+
+[diff]
+    external = /opt/homebrew/bin/difft
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = tracking
+
+[format]
+    pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    ui = auto
+
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+
+[git-up "bundler"]
+    check = true
+
+[git-up "fetch"]
+    prune = false
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true

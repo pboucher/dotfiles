@@ -1,0 +1,8 @@
+# Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bashrc.pre.bash"
+
+[[ -f "${HOME}/.fzf.bash" ]] && builtin source "${HOME}/.fzf.bash"
+[[ -f "${HOME}/.rye/env" ]] && builtin source "$HOME/.rye/env"
+
+# Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash"

@@ -1,0 +1,19 @@
+{{ $computerName := output "scutil" "--get" "ComputerName" | trim -}}
+{{ if eq $computerName "kusanagi" -}}
+.kube
+.oh-my-zsh/custom/F8321EFA-51F8-476D-A23C-C2B1456DB8C7.zsh
+.pip
+.aliases
+.tcshrc
+.npmrc
+.pgpass
+Library/Application Support/k9s
+{{ else -}}
+.aws
+{{ end -}}
+
+.bashrc
+.profile
+.config/yabai
+.config/skhd
+.config/sketchybar

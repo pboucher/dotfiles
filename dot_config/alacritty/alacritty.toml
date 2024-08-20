@@ -1,0 +1,171 @@
+import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+live_config_reload = true
+
+[shell]
+program = "/opt/homebrew/bin/zsh"
+args = ["-l", "-c", "tmux attach || tmux new-session -s main"]
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "MesloLGS Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0006v"
+key = "D"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006s"
+key = "D"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0006x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006h"
+key = "H"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006j"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006k"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006l"
+key = "L"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00061"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00062"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00063"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00064"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00065"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00066"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00067"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00068"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00069"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006H"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006J"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006K"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006L"
+key = "Right"
+mods = "Command"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+dynamic_padding = true
+padding.x = 10
+padding.y = 10
+decorations = "Buttonless"
+option_as_alt = "Both"
+# opacity = 0.8
+# blur = true
