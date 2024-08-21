@@ -17,8 +17,16 @@ Darwin)
         echo "Installing 1Password..."
         brew install --cask --adopt 1password
         brew install --cask --adopt 1password-cli
+        echo "Opening 1Password. Please log into your account and enable CLI integration."
+        open "/Applications/1Password.app"
+        echo "Press Enter to continue."
+        read
     fi
 
+    if [[ ! -d "${HOME}/.ssh" ]]; then
+        mkdir -p "${HOME}/.ssh"
+        chmod 700 "${HOME}/.ssh"
+    fi
     if [[ ! -f "${HOME}/.ssh/chezmoi_ed25519.pub" ]]; then
         op read "op://Private/chezmoi dotfile encryption/public key" > "${HOME}/.ssh/chezmoi_ed25519.pub"
     fi
