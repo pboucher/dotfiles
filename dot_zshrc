@@ -81,8 +81,7 @@ plugins=(
   common-aliases
   direnv
   docker
-  fast-syntax-highlighting
-  fd
+  F-Sy-H
   fzf
   git
   kubectl

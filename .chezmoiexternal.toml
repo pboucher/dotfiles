@@ -1,0 +1,4 @@
+[".oh-my-zsh/custom/plugins/F-Sy-H"]
+    type = "git-repo"
+    url = "https://github.com/z-shell/F-Sy-H.git"
+    refreshPeriod = "168h"

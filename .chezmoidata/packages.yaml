@@ -3,7 +3,6 @@ packages:
     darwin:
       taps:
       - "homebrew/bundle"
-      - "homebrew/cask-fonts"
       brews:
       - "age"
       - "atuin"
@@ -55,7 +54,7 @@ packages:
       - "visual-studio-code"
       vscode_extensions:
       - "alefragnani.project-manager"
-      - "amazonwebservices.codewhisperer-for-command-line-companion"
+      - "amazonwebservices.amazon-q-vscode"
       - "be5invis.vscode-custom-css"
       - "bierner.markdown-mermaid"
       - "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
@@ -66,13 +65,13 @@ packages:
       - "dbaeumer.vscode-eslint"
       - "deerawan.vscode-dash"
       - "dotenv.dotenv-vscode"
-      - "eamodio.gitlens"
+      # - "eamodio.gitlens"
       - "editorconfig.editorconfig"
       - "esbenp.prettier-vscode"
       - "fabiospampinato.vscode-todo-plus"
       - "flowtype.flow-for-vscode"
-      - "github.copilot"
-      - "github.copilot-chat"
+      # - "github.copilot"
+      # - "github.copilot-chat"
       - "github.vscode-pull-request-github"
       - "gruntfuggly.todo-tree"
       - "hbenl.vscode-test-explorer"
