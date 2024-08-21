@@ -6,6 +6,10 @@ Darwin)
     if ! type brew &> /dev/null; then
         echo "Installing Homebrew..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+        # If we didn't have homebrew installed, this is the first time we're installing so get age so that we can
+        # decrypt the dotfiles
+        eval "$(/opt/homebrew/bin/brew shellenv)"
         brew install age
     fi
 
