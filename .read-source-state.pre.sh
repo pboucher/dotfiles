@@ -13,6 +13,7 @@ Darwin)
         brew install age
     fi
 
+    # Install 1Password if it's not installed
     if ! type op &> /dev/null; then
         echo "Installing 1Password..."
         brew install --cask --adopt 1password
@@ -23,6 +24,13 @@ Darwin)
         read
     fi
 
+    # Install Oh My Zsh if it isn't present
+    if [[ ! -d "${HOME}/.oh-my-zsh" ]]; then
+        echo "Installing Oh My Zsh..."
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
+
+    # Setup SSH keys taken from 1Password so that chezmoi can encrypt/decrypt files
     if [[ ! -d "${HOME}/.ssh" ]]; then
         mkdir -p "${HOME}/.ssh"
         chmod 700 "${HOME}/.ssh"
