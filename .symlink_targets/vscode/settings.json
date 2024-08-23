@@ -1,0 +1,327 @@
+{
+    // System
+    "http.systemCertificates": false,
+    "redhat.telemetry.enabled": false,
+    "update.mode": "manual",
+
+    // Workbench
+    "workbench.activityBar.location": "bottom",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.fontAliasing": "auto",
+    "workbench.editor.showTabs": "none",
+    "workbench.editor.enablePreview": false,
+    "workbench.tree.indent": 15,
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.colorCustomizations": {},
+    "window.nativeFullScreen": true,
+    "window.newWindowDimensions": "inherit",
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        // Hide everything in /vendor, except the "laravel" and "livewire" folder.
+        "**/vendor/{[^l],?[^ai]}*": true,
+        // Hide everything in /public, except "index.php"
+        "**/public/{[^i],?[^n]}*": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/_ide_helper.php": true,
+        "**/composer.lock": true,
+        "**/package-lock.json": true,
+        "storage": true,
+        ".phpunit.result.cache": true,
+        ".venv": true,
+    },
+    "explorer.sortOrder": "default",
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "notebook.output.wordWrap": true,
+    // "notebook.output.textLineLimit": 200,
+    "chat.editor.wordWrap": "on",
+    "files.exclude": {
+        ".pytest_cache": true,
+        ".ruff_cache": true,
+        ".tox": true,
+        ".venv": true,
+        "**/__pycache__": true,
+        "**/.git": true,
+        "venv": true,
+        "__azurite*": true,
+        ".mypy_cache": true,
+        "__blobstorage__": true,
+        "__queuestorage__": true,
+    },
+    "vscode_custom_css.imports": [
+        "file:///Users/glennraya/custom-vscode.css",
+        "file:///Users/glennraya/vscode-script.js"
+    ],
+
+    // Editor
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "editor.detectIndentation": false,
+    "editor.rulers": [
+        119
+    ],
+    "editor.wordWrapColumn": 119,
+    "editor.linkedEditing": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.lineNumbers": "on",
+    "editor.guides.indentation": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.padding.top": 16,
+    "editor.cursorBlinking": "solid",
+    "editor.stickyScroll.enabled": true,
+    // "editor.lineHeight": 20,
+    "editor.minimap.enabled": false,
+    "editor.minimap.autohide": true,
+    "editor.minimap.scale": 2,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 250,
+    "editor.accessibilitySupport": "off",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        ".php_cs": "php",
+        ".php_cs.dist": "php",
+        ".env": "dotenv",
+        ".env*": "dotenv"
+    },
+    "diffEditor.wordWrap": "on",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "keyword",
+                    "variable.language",
+                    "entity.other.attribute-name.html",
+                    "entity.other.attribute-name",
+                    "keyword.control",
+                    "storage.type",
+                    "comment",
+                    "comment.block",
+                    "comment.line"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "editor.quickSuggestions": {
+        "strings": true,
+    },
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",  // Ensure - is part of words
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "vue-html": "html",
+        "vue": "html",
+        "react": "html",
+        "javascript": "html"
+    },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "debug.onTaskErrors": "debugAnyway",
+
+    // Silence the Noise
+    "breadcrumbs.enabled": true,
+    "scm.diffDecorations": "gutter",
+    // "editor.hover.delay": 1500,
+    "editor.hover.enabled": true,
+    "editor.matchBrackets": "near",
+    "workbench.tips.enabled": false,
+    "editor.colorDecorators": true,
+    "git.decorations.enabled": true,
+    "workbench.startupEditor": "none",
+    "editor.lightbulb.enabled": "off",
+    "editor.selectionHighlight": true,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.occurrencesHighlight": "singleFile",
+    "problems.decorations.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    // "editor.gotoLocation.multipleImplementations": "goto",
+    // "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+    // Typography
+    "editor.fontFamily": "GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono, Fira Code",
+    "editor.fontSize": 14,
+    // "editor.fontWeight": "400",
+    // "editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+    "terminal.integrated.fontFamily": "GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
+
+    // Terminal
+    "terminal.external.osxExec": "iTerm2.app",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.env.osx": {
+        "CW_NEW_SESSION": "1",
+        "Q_NEW_SESSION": "1",
+        "FIG_NEW_SESSION": "1"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+    /**
+    * Language Specific Settings
+    **/
+
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "[tailwindcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true
+    },
+
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    // "css.validate": false,
+
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.wordBasedSuggestions": "off",
+        "gitlens.codeLens.symbolScopes": [
+          "!Module"
+        ]
+    },
+    "python.analysis.typeCheckingMode": "basic",
+
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "php.suggest.basic": false,
+
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode10"
+    },
+    "svelte.enable-ts-plugin": true,
+
+    "yaml.schemas": {
+        "file:///Users/pboucher/.vscode/extensions/atlassian.atlascode-2.10.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+
+    /**
+    * Extensions
+    **/
+
+    // DotEnv
+    "dotenv.enableAutocloaking": false,
+
+    // Git
+    "git.openRepositoryInParentFolders": "always",
+    "git.autofetch": true,
+
+    // GitHub
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": false,
+        "yaml": false
+    },
+
+    // SQL Tools
+    "sqltools.format": {
+        "linesBetweenQueries": 2
+    },
+
+    // Prettier
+    "prettier.requireConfig": true,
+    "prettier.useEditorConfig": false,
+    "prettier.tabWidth": 4,
+    "vetur.format.options.tabSize": 4,
+
+    // Jupyter
+    "jupyter.askForKernelRestart": false,
+
+    // Codesnap
+    "codesnap.containerPadding": "8em",
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 12px 24px",
+    "codesnap.backgroundColor": "#FFC540",
+    "codesnap.showLineNumbers": false,
+    "codesnap.roundedCorners": true,
+
+    // Tailwind
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html"
+    },
+    "tailwindCSS.experimental.configFile": null
+}
