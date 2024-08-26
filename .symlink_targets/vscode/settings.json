@@ -323,5 +323,6 @@
     "tailwindCSS.includeLanguages": {
         "plaintext": "html"
     },
-    "tailwindCSS.experimental.configFile": null
+    "tailwindCSS.experimental.configFile": null,
+    "remote.SSH.configFile": "/Users/pboucher/.config/vscode/remote_ssh_config"
 }
