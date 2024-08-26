@@ -7,6 +7,7 @@
 .tcshrc
 .npmrc
 .pgpass
+config/vscode/encrypted_remote_ssh_config
 Library/Application Support/k9s
 {{ else -}}
 .aws
