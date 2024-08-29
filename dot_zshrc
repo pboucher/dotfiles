@@ -164,6 +164,26 @@ alias kc=kubectl
 alias nosleep="pmset noidle"  # Prevent system from going to sleep
 alias uic="pyside-uic"
 
+# Function that calls bpython if I'm just wanting to use an interactive python session
+function python() {
+    if [[ "$#" -gt 0 ]]; then
+        command python "$@"
+    else
+        if type bpython &> /dev/null; then
+            bpython
+        else
+            echo "bpython is not installed. Installing..."
+            if type pip &> /dev/null; then
+                pip install bpython
+            else
+                echo "Pip is not installed."
+                return 1
+            fi
+            bpython
+        fi
+    fi
+}
+
 # Edit my .zshrc file and immediately source it on exit
 function zshrc() {
     $EDITOR ~/.zshrc
