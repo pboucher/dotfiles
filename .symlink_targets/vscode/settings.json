@@ -181,8 +181,8 @@
     "editor.fontFamily": "GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono, Fira Code",
     "editor.fontSize": 14,
     // "editor.fontWeight": "400",
-    // "editor.fontLigatures": true,
-    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+    "editor.fontLigatures": false,
+    // "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
     "terminal.integrated.fontFamily": "GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono",
     "terminal.integrated.fontSize": 14,
 
@@ -191,9 +191,7 @@
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.env.osx": {
-        "CW_NEW_SESSION": "1",
-        "Q_NEW_SESSION": "1",
-        "FIG_NEW_SESSION": "1"
+        "Q_NEW_SESSION": "1"
     },
     "terminal.integrated.enableMultiLinePasteWarning": "never",
 
@@ -254,9 +252,6 @@
             "source.organizeImports": "explicit"
         },
         "editor.wordBasedSuggestions": "off",
-        "gitlens.codeLens.symbolScopes": [
-          "!Module"
-        ]
     },
     "python.analysis.typeCheckingMode": "basic",
 
