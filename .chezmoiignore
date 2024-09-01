@@ -1,13 +1,13 @@
 {{ $computerName := output "scutil" "--get" "ComputerName" | trim -}}
 {{ if eq $computerName "kusanagi" -}}
+.aliases
+.config/vscode/remote_ssh_config
 .kube
+.npmrc
 .oh-my-zsh/custom/F8321EFA-51F8-476D-A23C-C2B1456DB8C7.zsh
 .pip
-.aliases
-.tcshrc
-.npmrc
 .pgpass
-config/vscode/encrypted_remote_ssh_config
+.tcshrc
 Library/Application Support/k9s
 {{ else -}}
 .aws

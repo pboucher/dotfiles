@@ -184,6 +184,8 @@ function python() {
     fi
 }
 
+export PYTHONSTARTUP="${HOME}/.config/python/pystartup.py"
+
 # Edit my .zshrc file and immediately source it on exit
 function zshrc() {
     $EDITOR ~/.zshrc
