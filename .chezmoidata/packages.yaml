@@ -4,6 +4,7 @@ packages:
       taps:
       - "homebrew/bundle"
       brews:
+      - "aerospace"
       - "age"
       - "atuin"
       - "bat"
