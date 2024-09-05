@@ -3,8 +3,8 @@ packages:
     darwin:
       taps:
       - "homebrew/bundle"
+      - "nikitabobko/tap"
       brews:
-      - "aerospace"
       - "age"
       - "atuin"
       - "bat"
@@ -33,6 +33,7 @@ packages:
       casks:
       - "1password"
       - "1password-cli"
+      - "aerospace"
       - "aldente"
       - "amazon-q"
       - "arc"
