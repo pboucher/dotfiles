@@ -4,10 +4,12 @@ packages:
       taps:
       - "homebrew/bundle"
       - "nikitabobko/tap"
+      - "FelixKratz/formulae"
       brews:
       - "age"
       - "atuin"
       - "bat"
+      - "borders"
       - "btop"
       - "curl"
       - "chezmoi"

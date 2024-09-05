@@ -60,6 +60,9 @@
 
         # Only ask for a password in the screensaver if it is running for longer than 10 seconds
         screensaver.askForPasswordDelay = 10;
+
+        # Displays have separate spaces
+        spaces.spans-displays = true;
       };
 
       nix.extraOptions = ''
