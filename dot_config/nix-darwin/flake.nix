@@ -63,6 +63,9 @@
 
         # Displays have separate spaces
         spaces.spans-displays = true;
+
+        # Enable trackpad tap to click
+        NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
       };
 
       nix.extraOptions = ''
@@ -75,6 +78,10 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
     darwinConfigurations."kusanagi" = nix-darwin.lib.darwinSystem {
+      modules = [ configuration ];
+    };
+
+    darwinConfigurations."mbp-158" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
