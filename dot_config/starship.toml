@@ -27,9 +27,8 @@ format = """
 [\ue0c6](fg:peach bg:yellow)\
 [ $status ](fg:blue bg:yellow)\
 
-[\ue0b0](fg:yellow bg:#1d2021)\
-[ $time( - $cmd_duration) ](fg:text bg:#1d2021)\
-[\ue0b0 ](fg:#1d2021)\
+[\ue0b0](fg:yellow)\
+[( $cmd_duration)](fg:text)\
 
 $line_break\
 $character
