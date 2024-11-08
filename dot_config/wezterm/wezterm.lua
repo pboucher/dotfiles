@@ -1,11 +1,14 @@
--- Awesome intro to WezTerm configuration
+-- Awesome intro to WezTerm configuration and other config examples and resources
 -- https://alexplescan.com/posts/2024/08/10/wezterm/
+-- https://mwop.net/blog/2024-07-04-how-i-use-wezterm.html
 
 local wezterm = require 'wezterm'
 local projects = require 'projects'
 
 local config = wezterm.config_builder()
 local FONT = 'GeistMono Nerd Font Mono'
+
+-- Theme
 config.color_scheme = 'catppuccin-mocha'
 
 -- Font
@@ -16,10 +19,23 @@ config.window_frame = {
   font_size = 13,
 }
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+config.adjust_window_size_when_changing_font_size = false
+config.scrollback_lines = 5000
+-- config.pane_focus_follows_mouse = true
+config.use_fancy_tab_bar = true
+config.switch_to_last_active_tab_when_closing_tab = true
+config.tab_bar_at_bottom = true
+config.window_padding = {
+    left = 20,
+    right = 20,
+    top = 10,
+    bottom = 10,
+}
+config.window_close_confirmation = "NeverPrompt"
 
 -- Slightly transparent and blurred background
-config.window_background_opacity = 0.95
-config.macos_window_background_blur = 30
+config.window_background_opacity = 0.98
+config.macos_window_background_blur = 80
 
 -- Removes the title bar, leaving only the tab bar. Keeps
 -- the ability to resize by dragging the window's edges.
@@ -27,6 +43,7 @@ config.macos_window_background_blur = 30
 -- you want to keep the window controls visible and integrate
 -- them into the tab bar.
 config.window_decorations = 'RESIZE'
+
 
 --------------------------------------------------------------------------------
 -- Powerline / Starship -like right side header
@@ -39,7 +56,7 @@ local function segments_for_right_status(window)
   }
 end
 
-wezterm.on('update-status', function(window, _)
+wezterm.on('update-right-status', function(window, _)
   local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
   local segments = segments_for_right_status(window)
   local color_scheme = window:effective_config().resolved_palette
@@ -88,6 +105,7 @@ wezterm.on('update-status', function(window, _)
   end
   window:set_right_status(wezterm.format(elements))
 end)
+
 
 --------------------------------------------------------------------------------
 -- Keybindings
@@ -173,6 +191,36 @@ config.keys = {
   move_pane('UpArrow', 'Up'),
   move_pane('LeftArrow', 'Left'),
   move_pane('RightArrow', 'Right'),
+  -- Change tab title
+  {
+    key = 'T',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.PromptInputLine {
+      description = 'Enter new name for tab',
+      action = wezterm.action_callback(
+        function(window, pane, line)
+          if line then
+            window:active_tab():set_title(line)
+          end
+        end
+      ),
+    },
+  },
+  -- Change workspace title
+  {
+    key = 'W',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.PromptInputLine {
+      description = 'Enter new name for workspace',
+      action = wezterm.action_callback(
+        function(window, pane, line)
+          if line then
+            wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
+          end
+        end
+      ),
+    },
+  },
   -- Keybinding layer to resize panes
   {
     key = 'r',
