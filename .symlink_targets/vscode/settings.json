@@ -66,7 +66,7 @@
     ],
     "editor.wordWrapColumn": 119,
     "editor.linkedEditing": true,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.formatOnSaveMode": "file",
     "editor.lineNumbers": "on",
     "editor.guides.indentation": false,
@@ -76,16 +76,15 @@
     "editor.cursorBlinking": "solid",
     "editor.stickyScroll.enabled": true,
     // "editor.lineHeight": 20,
-    "editor.minimap.enabled": false,
-    "editor.minimap.autohide": true,
-    "editor.minimap.scale": 2,
+    "editor.minimap.enabled": true,
+    "editor.minimap.autohide": false,
+    "editor.minimap.scale": 1,
     "editor.minimap.renderCharacters": false,
-    "editor.minimap.maxColumn": 250,
+    "editor.minimap.maxColumn": 120,
     "editor.accessibilitySupport": "off",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.autoSave": "afterDelay",
     "files.associations": {
         ".php_cs": "php",
         ".php_cs.dist": "php",
@@ -170,20 +169,20 @@
     "problems.decorations.enabled": false,
     "editor.renderControlCharacters": false,
     "editor.hideCursorInOverviewRuler": true,
-    "editor.gotoLocation.multipleReferences": "goto",
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleReferences": "peek",
+    "editor.gotoLocation.multipleDefinitions": "peek",
+    "editor.gotoLocation.multipleDeclarations": "peek",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     // "editor.gotoLocation.multipleImplementations": "goto",
     // "editor.gotoLocation.multipleTypeDefinitions": "goto",
 
     // Typography
-    "editor.fontFamily": "GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono, Fira Code",
+    "editor.fontFamily": "CommitMono Nerd Font, GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono, Fira Code",
     "editor.fontSize": 14,
     // "editor.fontWeight": "400",
     "editor.fontLigatures": false,
     // "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
-    "terminal.integrated.fontFamily": "GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono",
+    "terminal.integrated.fontFamily": "CommitMono Nerd Font, GeistMono Nerd Font, MesloLGSDZ Nerd Font Mono",
     "terminal.integrated.fontSize": 14,
 
     // Terminal
@@ -261,7 +260,7 @@
     "php.suggest.basic": false,
 
     "[sql]": {
-        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+        "editor.defaultFormatter": "mtxr.sqltools"
     },
 
     "[svelte]": {
@@ -319,5 +318,21 @@
         "plaintext": "html"
     },
     "tailwindCSS.experimental.configFile": null,
-    "remote.SSH.configFile": "/Users/pboucher/.config/vscode/remote_ssh_config"
+    "remote.SSH.configFile": "/Users/pboucher/.config/vscode/remote_ssh_config",
+    "python.defaultInterpreterPath": "/Users/pboucher/laika/dev/laika-federated-scripts/master.laika-federated-scripts/.venv",
+    "@azure.argTenant": "",
+    "rufo.exe": "/Users/pboucher/.local/share/mise/installs/ruby/3.4.1/bin/rufo",
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.semanticHighlighting.enabled": true,
+        "editor.formatOnType": true,
+        "editor.wordSeparators": "`~@#$%^&*()-=+[{]}\\|;:'\",.<>/"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "notebook.output.textLineLimit": 50
 }

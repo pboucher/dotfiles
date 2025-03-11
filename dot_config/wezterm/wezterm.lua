@@ -6,7 +6,8 @@ local wezterm = require 'wezterm'
 local projects = require 'projects'
 
 local config = wezterm.config_builder()
-local FONT = 'GeistMono Nerd Font Mono'
+local FONT = 'CommitMono Nerd Font Mono'
+-- local FONT = 'GeistMono Nerd Font Mono'
 
 -- Theme
 config.color_scheme = 'catppuccin-mocha'
